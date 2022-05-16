@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>eres mayor de edad</h1>
+    </header>
+    <section>
+        <div class="grid_numeros">
+            <div class="calculos" id="a">
+
+            </div>
+            <div class="calculos" id="b">
+
+            </div>
+            <div class="calculos" id="c">
+                
+            </div>
+        </div>
+        <div class="calculos" id="salida"></div>
+        <div class="grid_raices">
+            <div class="calculos" id="c1">
+
+            </div>
+            <div class="calculos" id="c2">
+
+            </div>
+        </div>
+    </section>
+    <script>
+        var a = parseInt(prompt("Introduce el valor a :"))
+        var b = parseInt(prompt("Introduce el valor b :"))
+        var c = parseInt(prompt("Introduce el valor c :"))
+        var d = Math.pow(b,2) - (4*a*c)
+        var c1 = ( - b + Math.sqrt(d) ) / (2*a)
+        var c2 = ( - b - Math.sqrt(d) ) / (2*a)
+        document.getElementById("a").innerHTML="a = "+a;
+        document.getElementById("b").innerHTML="b = "+b;
+        document.getElementById("c").innerHTML="c = "+c;
+        if( d > 0 ){
+            document.getElementById("salida").innerHTML="La ecuacion tiene 2 raices";
+            } else if ( d == 0){
+            document.getElementById("salida").innerHTML="La ecuacion tiene 1 raiz";
+        } else {
+            document.getElementById("salida").innerHTML="La ecuacion tiene raices imaginarias";
+        }
+        document.getElementById("c1").innerHTML="c1 = "+c1.toFixed(2);
+        document.getElementById("c2").innerHTML="c2 = "+c2.toFixed(2);
+</script>
+</body>
+</html>
